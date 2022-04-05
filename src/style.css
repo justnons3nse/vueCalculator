@@ -29,12 +29,13 @@ input {
 }
 
 .sortLongTerm,
-.package {
+.package,
+.length,
+.extraInsurance  {
   display: flex;
   justify-content: center;
 }
 
-.shortTerm,
 .selectButton {
   width: 8rem;
   font-size: 40px;
@@ -45,14 +46,17 @@ input {
   border: none;
 }
 
-.selectButton:hover {
+.selectButton:hover,
+.total:hover {
   color: #fff;
   background-color: #0074d9;
   box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
   transform: translateY(-2px);
+  cursor: pointer;
 }
 
-.selectButton:active {
+.selectButton:active,
+.total:active {
   box-shadow: none;
   transform: translateY(0);
 }
@@ -65,18 +69,11 @@ input {
 .package button,
 .extraInsurance button {
   padding: 40px;
-  cursor: pointer;
 }
 
 .active {
   background-color: #0074d9;
   color: #fff;
-}
-
-.length,
-.extraInsurance {
-  display: flex;
-  justify-content: center;
 }
 
 .length input {
@@ -87,19 +84,6 @@ input[type="date"] {
   position: relative;
   border: none;
   box-shadow: 0 15px 30px 5px rgb(0 0 0 / 10%);
-}
-
-/* create a new arrow, because we are going to mess up the native one
-see "List of symbols" below if you want another, you could also try to add a font-awesome icon.. */
-input[type="date"]:after {
-  content: "\25BC";
-  color: #555;
-  padding: 0 5px;
-}
-
-/* change color of symbol on hover */
-input[type="date"]:hover:after {
-  color: #0074d9;
 }
 
 /* make the native arrow invisible and stretch it over the whole field so you can click anywhere in the input field to trigger the native datepicker*/
@@ -119,11 +103,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   margin-left: 15px;
 }
 
-.person {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 10px;
-}
 .person select {
   text-align: center;
   padding: 10px;
@@ -132,21 +111,9 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .total {
+  margin-top: 15px;
   padding: 15px;
   border-radius: 15px;
   box-shadow: 0 15px 30px 5px rgb(0 0 0 / 10%);
   border: none;
-}
-
-.total:hover {
-  color: #fff;
-  background-color: #0074d9;
-  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
-  transform: translateY(-2px);
-  cursor: pointer;
-}
-
-.total:active {
-  box-shadow: none;
-  transform: translateY(0);
 }
