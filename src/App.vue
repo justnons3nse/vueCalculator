@@ -56,7 +56,7 @@
     </div>
 
     <div v-if="endDate || longToggle">
-      <h3>Balík Poistenia</h3>
+      <h3>Balík Poistenia:</h3>
       <div class="package">
         <div>
           <button
@@ -128,7 +128,7 @@
   </div>
   <button class="total" v-if="peopleSelected" @click="calculatePrice">Spočítať cenu</button>
   <div v-if="grandTotal > 0">
-    <h2>Cena poistenia {{ grandTotal }}$</h2>
+    <h2>Cena poistenia : {{ grandTotal }}$</h2>
   </div>
   <p>Check The Project at <a href="https://github.com/justnons3nse/vueCalculator" target="_blank">Github</a></p>
 </template>
@@ -199,7 +199,7 @@ export default {
     calculateDays() {
       const diffDays = (date, otherDate) =>
         Math.ceil(Math.abs(date - otherDate) / (24 * 60 * 60 * 1000));
-      if (this.startDate < this.endDate) {
+      if (this.startDate <= this.endDate) {
         this.days =
           diffDays(new Date(this.startDate), new Date(this.endDate)) + 1;
       }
