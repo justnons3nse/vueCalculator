@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #c9ced3;
+  font-family: Spartan, sans-serif;
+}
+
+#app {
+  margin: 1rem auto;
+  max-width: 50rem;
+  padding: 1rem;
+  text-align: center;
+  width: 100%;
+  background-color: #e7e7e7;
+  border-radius: 20px;
+  box-shadow: 0 15px 30px 5px rgb(0 0 0 / 30%);
+}
+
+label,
+input {
+  margin-bottom: 0.5rem;
+  display: block;
+  width: 100%;
+}
+
+.sortLongTerm,
+.package {
+  display: flex;
+  justify-content: center;
+}
+
+.shortTerm,
+.selectButton {
+  width: 8rem;
+  font-size: 40px;
+  color: black;
+  margin-left: 15px;
+  border-radius: 15px;
+  box-shadow: 0 15px 30px 5px rgb(0 0 0 / 10%);
+  border: none;
+}
+
+.selectButton:hover {
+  color: #fff;
+  background-color: #0074d9;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+.selectButton:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+
+.selectButton:disabled {
+  pointer-events: none;
+}
+
+.sortLongTerm button,
+.package button,
+.extraInsurance button {
+  padding: 40px;
+  cursor: pointer;
+}
+
+.active {
+  background-color: #0074d9;
+  color: #fff;
+}
+
+.length,
+.extraInsurance {
+  display: flex;
+  justify-content: center;
+}
+
+.length input {
+  padding: 10px;
+}
+
+input[type="date"] {
+  position: relative;
+  border: none;
+  box-shadow: 0 15px 30px 5px rgb(0 0 0 / 10%);
+}
+
+/* create a new arrow, because we are going to mess up the native one
+see "List of symbols" below if you want another, you could also try to add a font-awesome icon.. */
+input[type="date"]:after {
+  content: "\25BC";
+  color: #555;
+  padding: 0 5px;
+}
+
+/* change color of symbol on hover */
+input[type="date"]:hover:after {
+  color: #0074d9;
+}
+
+/* make the native arrow invisible and stretch it over the whole field so you can click anywhere in the input field to trigger the native datepicker*/
+input[type="date"]::-webkit-calendar-picker-indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: auto;
+  height: auto;
+  color: transparent;
+  background: transparent;
+}
+
+.endDate {
+  margin-left: 15px;
+}
+
+.person {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+.person select {
+  text-align: center;
+  padding: 10px;
+  border: none;
+  box-shadow: 0 15px 30px 5px rgb(0 0 0 / 10%);
+}
+
+.total {
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 15px 30px 5px rgb(0 0 0 / 10%);
+  border: none;
+}
+
+.total:hover {
+  color: #fff;
+  background-color: #0074d9;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+  cursor: pointer;
+}
+
+.total:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
